@@ -4,6 +4,11 @@
 
 int main(){
   int Die[2], sum=0, i;
+  char name[30];
+
+  printf("What is your name?\n");
+  scanf("%s",name);
+  printf("Hello, %s!\n", name);
 
   printf("Rolling the dice...\n");
 
@@ -16,6 +21,8 @@ int main(){
   }
   
   printf("Die 1 : %d\nDie 2 : %d\nTotal value : %d\n", Die[0], Die[1], sum);
+  if(sum > 7) printf("You won!\n");
+  else printf("You lose\n");
 
   return 0;
 }
